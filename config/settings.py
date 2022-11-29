@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     # My apps 
     
     'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
 ]
 
 AUTHENTICATION_BACKENDS = [
