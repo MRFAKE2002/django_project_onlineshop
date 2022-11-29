@@ -1,12 +1,14 @@
 {% extends '_base.html' %}
 
-
+<!-- Django Tags -->
 {% load i18n %}
 
+<!-- Third Party Tags -->
+{% load crispy_forms_tags %}
 
 {% block title %}
 
-    {% trans 'email confirmation' %}
+    {% trans 'Log in' %}
 
 {% endblock %}
 
@@ -14,8 +16,8 @@
 
     <form method='POST'>
         {% csrf_token %}
-        {{ form }}
-        <button type='submit' class='btn btn-primary'>{% trans 'Submit' %}</button>
+        {{ form|crispy }}
+        <button type='submit' class='btn btn-primary'>{% trans 'Log in' %}</button>
     </form>
 
 {% endblock %}

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     
     'allauth',
     'allauth.account',
+    'crispy_forms',
     
     # My apps 
     
@@ -131,13 +133,27 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# locale
 
-TIME_ZONE = 'UTC'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa'
 
-USE_I18N = True
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
 
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
+
+USE_I18N = True     # Internationalization
+USE_L10N = True     # Localization
 USE_TZ = True
+
+PROJECT_PATH = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
+LOCALE_PATHS = (
+    os.path.join(PROJECT_PATH, "locale"),
+)
 
 
 # Static files (CSS, JavaScript, Images)
@@ -150,7 +166,31 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Crispy forms for config
 
-# accounts CustomUser config 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Accounts CustomUser config 
 
 AUTH_USER_MODEL = 'accounts.CustomUser' 
+
+# Login and Logout redirect config
+
+LOGIN_REDIRECT_URL = 'home'
+
+LOGOUT_REDIRECT_URL = 'home'
+
+# Allauth config
+
+ACCOUNT_SESSION_REMEMBER = True  
+
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
+ACCOUNT_USERNAME_REQUIRED = False
+
+ACCOUNT_EMAIL_REQUIRED = True
+
+ACCOUNT_UNIQUE_EMAIL = True
+
