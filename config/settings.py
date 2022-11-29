@@ -43,9 +43,10 @@ INSTALLED_APPS = [
     
     # Third party apps 
     
-    'allauth',
+    'allauth', # We use this app to make our login and logout and signup for our project.
     'allauth.account',
-    'crispy_forms',
+    'crispy_forms', # We use this app for make our forms better in templates.
+    'rosetta', # We use this app to translate our codes to persian and we should make our LANGUAGES in config settings.
     
     # My apps 
     
@@ -194,3 +195,15 @@ ACCOUNT_EMAIL_REQUIRED = True
 
 ACCOUNT_UNIQUE_EMAIL = True
 
+# For send a email confirmation to console
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# # For send a confirmation from our email to user email
+
+# EMAIL_PACKED = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "mr3fake@gmail.com"
+# EMAIL_HOST_PASSWORD = "roozbehbadali1381"

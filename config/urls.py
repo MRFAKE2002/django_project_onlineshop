@@ -19,5 +19,10 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
+    
+    # Allauth
     path('accounts/', include('allauth.urls')),
+    
+    # Rosetta
+    path('rosetta/', include('rosetta.urls')),
 ]
