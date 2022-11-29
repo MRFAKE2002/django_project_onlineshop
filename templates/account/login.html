@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+
+
+{% load i18n %}
+
+
+{% block title %}
+
+    {% trans 'email confirmation' %}
+
+{% endblock %}
+
+{% block body %}
+
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form }}
+        <button type='submit' class='btn btn-primary'>{% trans 'Submit' %}</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+
+{% load i18n %}
+
+
+{% block title %}
+
+    {% trans 'email confirmation' %}
+
+{% endblock %}
+
+{% block body %}
+
+    <p>
+    <h1> {% trans "Are you sure?" %} </h1>
+    <h3> {% trans "Do you want to log out ?" %} </h3>
+    </p>
+
+    <button type='submit' class='btn btn-danger'>{% trans 'Submit' %}</button>
+
+{% endblock %}
