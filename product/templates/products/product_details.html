@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+<!-- Django Tags -->
+{% load i18n %}
+
+<!-- Third Party Tags -->
+{% load crispy_forms_tags %}
+
+{% block title %}
+
+    {% trans "Product Details" %}
+
+{% endblock %}
+
+{% block body %}
+    
+    {{ product.title }}
+    {{ product.text }}
+    {{ product.price }}
+
+{% endblock %}
+

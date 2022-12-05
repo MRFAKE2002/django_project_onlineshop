@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+
+<!-- Django Tags -->
+{% load i18n %}
+
+<!-- Third Party Tags -->
+{% load crispy_forms_tags %}
+
+{% block title %}
+
+    {% trans "Product List" %}
+
+{% endblock %}
+
+{% block body %}
+
+    {% for product in products %}
+    
+        <a href="{% url "product_details" product.id %}"> {{ product.title }} </a> 
+        {{ product.text }}
+
+    {% endfor %}
+
+{% endblock %}
+
