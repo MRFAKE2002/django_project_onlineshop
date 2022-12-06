@@ -14,12 +14,131 @@
 
 {% block body %}
 
-    {% for product in products %}
+    <!-- Page Content -->
+    <!-- Items Starts Here -->
+    <div class="featured-page">
+        <div class="container">
+          <div class="row d-flex flex-row-reverse text-right">
+            <div class="col-md-4 col-sm-12">
+              <div class="section-heading">
+                <div class="line-dec"></div>
+                <h1 style="padding-top: 10px;">موارد ویژه</h1>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+              <div id="filters" class="button-group d-flex flex-row-reverse text-right">
+                <button class="btn btn-primary" data-filter="*">همه محصولات</button>
+                <button class="btn btn-primary" data-filter=".new">جدیدترین</button>
+                <button class="btn btn-primary" data-filter=".low">ارزان ترین</button>
+                <button class="btn btn-primary" data-filter=".high">گران ترین </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
     
-        <a href="{% url "product_details" product.id %}"> {{ product.title }} </a> 
-        {{ product.text }}
-
-    {% endfor %}
-
+      <div class="featured container no-gutter ">
+  
+          <div class="row posts text-right flex-column-reverse ">
+              <div id="1" class="item new col-md-4 ">
+                <a href="single-product.html">
+                  <div class="featured-item">
+                    <img src="assets/images/product-01.jpg" alt="">
+                    <h4>لورم ایپسوم متن ساختگی با </h4>
+                    <h6>15000</h6>تومان
+                  </div>
+                </a>
+              </div>
+              <div id="2" class="item high col-md-4">
+                <a href="single-product.html">
+                  <div class="featured-item">
+                    <img src="assets/images/product-02.jpg" alt="">
+                    <h4>لورم ایپسوم متن ساختگی با </h4>
+                    <h6>25000</h6>تومان
+                  </div>
+                </a>
+              </div>
+              <div id="3" class="item low col-md-4">
+                <a href="single-product.html">
+                  <div class="featured-item">
+                    <img src="assets/images/product-03.jpg" alt="">
+                    <h4>لورم ایپسوم متن ساختگی با </h4>
+                    <h6>35000</h6>تومان
+                  </div>
+                </a>
+              </div>
+              <div id="4" class="item low col-md-4">
+                <a href="single-product.html">
+                  <div class="featured-item">
+                    <img src="assets/images/product-04.jpg" alt="">
+                    <h4>لورم ایپسوم متن ساختگی با </h4>
+                    <h6>45000</h6>تومان
+                  </div>
+                </a>
+              </div>
+              <div id="5" class="item new high col-md-4">
+                <a href="single-product.html">
+                  <div class="featured-item">
+                    <img src="assets/images/product-05.jpg" alt="">
+                    <h4>لورم ایپسوم متن ساختگی با </h4>
+                    <h6>55000</h6>تومان
+                  </div>
+                </a>
+              </div>
+              <div id="6" class="item new col-md-4">
+                <a href="single-product.html">
+                  <div class="featured-item">
+                    <img src="assets/images/product-06.jpg" alt="">
+                    <h4>لورم ایپسوم متن ساختگی با </h4>
+                    <h6>65000</h6>تومان
+                  </div>
+                </a>
+              </div>
+              <div id="7" class="item new high col-md-4">
+                <a href="single-product.html">
+                  <div class="featured-item">
+                    <img src="assets/images/product-03.jpg" alt="">
+                    <h4>لورم ایپسوم متن ساختگی با </h4>
+                    <h6>75000</h6>تومان
+                  </div>
+                </a>
+              </div>
+              <div id="8" class="item low new col-md-4">
+                <a href="single-product.html">
+                  <div class="featured-item">
+                    <img src="assets/images/product-02.jpg" alt="">
+                    <h4>لورم ایپسوم متن ساختگی با </h4>
+                    <h6>85000</h6>تومان
+                  </div>
+                </a>
+              </div>
+              <div id="9" class="item new col-md-4">
+                <a href="single-product.html">
+                  <div class="featured-item">
+                    <img src="assets/images/product-01.jpg" alt="">
+                    <h4>لورم ایپسوم متن ساختگی با </h4>
+                    <h6>95000</h6>تومان
+                  </div>
+                </a>
+              </div>
+          </div>
+      </div>
+  
+      <div class="page-navigation">
+        <div class="container">
+          <div class="row ">
+            <div class="col-md-12 ">
+              <ul class="d-flex flex-row-reverse justify-content-center">
+                <li class="current-page  ml-1"><a href="#">1</a></li>
+                <li class=" ml-1"><a href="#">2</a></li>
+                <li class=" ml-1"><a href="#">3</a></li>
+                <li class=" ml-1"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Featred Page Ends Here -->
+  
 {% endblock %}
 
