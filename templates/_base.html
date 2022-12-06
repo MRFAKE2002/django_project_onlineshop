@@ -6,41 +6,103 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{% block title %}{% endblock %}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body dir='rtl'>
-        <ul class="user-info-menu">
-            {% if user.is_authenticated %}
-            <li>
-                <a class="text-right" href="{% url 'account_logout' %}">{% trans 'LOGOUT' %}<a>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/tooplate-main.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <!--
+    Tooplate 2114 Pixie
+    https://www.tooplate.com/view/2114-pixie
+    -->
+
+  </head>
+  <body dir='rtl'>
+
+      <!-- Pre Header -->
+      <div id="pre-header">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <span>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="assets/images/header-logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto d-flex flex-row-reverse">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">خانه
+                <span class="sr-only">(جاری)</span>
+              </a>
             </li>
-            <li>
-                <a class="text-right" href="#">{% trans 'PROFILE' %}</a>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">محصولات</a>
             </li>
-            {% else %}
-            <li>
-                <a class="text-right" href="{% url 'account_login' %}">{% trans 'LOGIN' %}</a>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">درباره ما</a>
             </li>
-            <li>
-                <a class="text-right" href="{% url 'account_signup' %}">{% trans 'SIGNUP' %}</a>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">تماس با ما</a>
             </li>
-            {% endif %}
-        </ul>        
-        {% block body %}
-        
-        {% endblock %}
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
-    </body>
+    <ul class="user-info-menu">
+        {% if user.is_authenticated %}
+        <li>
+            <a class="text-right" href="{% url 'account_logout' %}">{% trans 'LOGOUT' %}<a>
+        </li>
+        <li>
+            <a class="text-right" href="#">{% trans 'PROFILE' %}</a>
+        </li>
+        {% else %}
+        <li>
+            <a class="text-right" href="{% url 'account_login' %}">{% trans 'LOGIN' %}</a>
+        </li>
+        <li>
+            <a class="text-right" href="{% url 'account_signup' %}">{% trans 'SIGNUP' %}</a>
+        </li>
+        {% endif %}
+    </ul>        
+
+    {% block body %}
+
+    {% endblock %}
+
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script src="" async defer></script>
+  </body>
 </html>
