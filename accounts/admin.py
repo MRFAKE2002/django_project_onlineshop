@@ -7,7 +7,7 @@ from .forms import CustomUserChangeForm, CustomUserCreationForm
 @admin.register(CustomUser)
 class CustomAdmin(UserAdmin):
     model = CustomUser
-    add_form = CustomUserChangeForm
+    add_form = CustomUserCreationForm
     FORM = CustomUserChangeForm
     list_display = ('email', 'username',)
     
