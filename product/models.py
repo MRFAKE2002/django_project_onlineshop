@@ -37,3 +37,6 @@ class Comment(models.Model):
     
     active = models.BooleanField(verbose_name = _('active'), default=True)
 
+
+    def get_absolute_url(self):
+        return reverse('product_detail', args=(self.pk))
