@@ -5,10 +5,19 @@ from django.utils.translation import gettext as _ # we use this function to tran
 from django.utils import timezone
 
 class Product(models.Model):
+    PRODUCT_STARS = [
+        ('1' , _('very bad')),
+        ('2' , _('bad')),
+        ('3' , _('normal')),
+        ('4' , _('good')),
+        ('5' , _('perfect')),
+    ]
+
     title = models.CharField(_('Title'), max_length=100)
     text = models.TextField()
     price = models.PositiveIntegerField(default=0)
     active = models.BooleanField(_('Active'), default=True)
+    star = models.CharField(choices=PRODUCT_STARS , max_length=5, verbose_name=_('Star'),)
     
     datetime_created = models.DateTimeField(_('Create'), default=timezone.now)
     datetime_modified = models.DateTimeField(_('Modified'), auto_now=True)
@@ -22,9 +31,11 @@ class Product(models.Model):
 
 class Comment(models.Model):
     PRODUCT_STARS = [
-        ('1' , _('bad')),
-        ('1' , _('normal')),
-        ('1' , _('good')),
+        ('1' , _('very bad')),
+        ('2' , _('bad')),
+        ('3' , _('normal')),
+        ('4' , _('good')),
+        ('5' , _('perfect')),
     ]
     
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments', verbose_name=_('Product'),)
