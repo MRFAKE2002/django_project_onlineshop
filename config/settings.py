@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'product.apps.ProductConfig',
+    'cart.apps.CartConfig',
 ]
 
 AUTHENTICATION_BACKENDS = [
