@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
     path('products/', include('product.urls')),
+    path('cart/', include('cart.urls')),
     
     # Allauth
     path('accounts/', include('allauth.urls')),
