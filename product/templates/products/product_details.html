@@ -123,26 +123,32 @@
                         </div>
                     </form>
                 </div>
-                <div class="d-flex align-items-center mb-4 pt-2">
-                    <div class="input-group quantity mr-3" style="width: 130px;">
-                        <div class="input-group-btn">
-                            <button class="btn btn-primary btn-minus">
-                                <i class="fa fa-minus"></i>
-                            </button>
+                <form action="{% url 'cart:add_to_cart' product.id %}" method="POST">
+                    {% csrf_token %}
+                    {% comment %} 
+                    {{ add_to_cart|crispy }} 
+                    {% endcomment %}
+                    <div class="input-group " style="width: 130px;">
+                        <div class="input-group-btn ">
+                            <div class="btn btn-primary btn-minus">
+                                <i class="fa fa-minus "></i>
+                            </div>
                         </div>
-                        <input type="text" class="form-control bg-secondary border-0 text-center" value="1">
-                        <div class="input-group-btn">
-                            <button class="btn btn-primary btn-plus">
+                        <input type="text" name="quantity" class="form-control border-0 text-center quantity-input" id="qty" value="1" min="1" max="21">
+                        <div class="input-group-btn quantity-input">
+                            <div class="btn btn-primary quantity-input" >
                                 <i class="fa fa-plus"></i>
-                            </button>
+                            </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary px-3">
-                        <i class="fa fa-shopping-cart mr-1">
-                            {% trans "Add To Cart"%}
-                        </i>
-                    </button>
-                </div>
+                    <div class="d-flex align-items-center mb-4 pt-2">
+                        <button class="btn btn-primary px-3">
+                            <i class="fa fa-shopping-cart mr-1">
+                                {% trans "Add To Cart"%}
+                            </i>
+                        </button>
+                    </div> 
+                </form>    
                 <div class="d-flex pt-2">
                     <strong class="text-dark mr-2">Share on:</strong>
                     <div class="d-inline-flex">

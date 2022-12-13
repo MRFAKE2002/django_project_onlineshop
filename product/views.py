@@ -3,6 +3,7 @@ from django.views import generic
 
 from .forms import CommentForm
 from .models import Product, Comment
+from cart.forms import AddProductToCart
 
 class ProductListView(generic.ListView):
     # We use queryset for add or change something that are in our databases in our code
@@ -20,6 +21,8 @@ class ProductDetailView(generic.DetailView):
         context = super().get_context_data(**kwargs)
         
         context['comment_form'] = CommentForm()
+        
+        context['add_to_cart'] = AddProductToCart()
 
         return context
 
