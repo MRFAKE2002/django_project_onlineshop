@@ -48,11 +48,11 @@
                     </div>
                     {% if user.is_authenticated %}
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-light">{% trans "Profile"%}</button>
+                            <button type="submit" class="btn btn-sm btn-light">{% trans "Profile"%}</button>
                         </div>
                     {% else %}
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">{% trans "My Account"%}</button>
+                            <button type="submit" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">{% trans "My Account"%}</button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a href="{% url 'account_login' %}"><button class="dropdown-item" type="submit">{% trans "Sign in"%}</button></a>
                                 <a href="{% url 'account_signup' %}"><button class="dropdown-item" type="submit">{% trans "Sign up"%}</button></a>

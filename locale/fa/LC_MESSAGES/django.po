@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-29 20:30+0330\n"
-"PO-Revision-Date: 2022-11-29 20:33+0330\n"
+"POT-Creation-Date: 2022-12-13 12:04+0330\n"
+"PO-Revision-Date: 2022-12-13 12:24+0330\n"
 "Last-Translator:   <roozbehsarcheshme@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,6 +18,280 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\cart\templates\cart\cart_detail.html:7
+msgid "cart"
+msgstr "سبد خرید "
+
+#: .\cart\templates\cart\cart_detail.html:18
+#: .\product\templates\products\product_details.html:22
+#: .\product\templates\products\product_list.html:22 .\templates\home.html:7
+#: .\templates\top_header.html:39
+msgid "Home"
+msgstr "خانه "
+
+#: .\cart\templates\cart\cart_detail.html:19 .\templates\top_header.html:10
+#: .\templates\top_header.html:40
+msgid "Shop"
+msgstr "فروشگاه"
+
+#: .\cart\templates\cart\cart_detail.html:20
+msgid "Shopping Cart"
+msgstr "سبد خرید فروشگاه"
+
+#: .\cart\templates\cart\cart_detail.html:36
+msgid "Products"
+msgstr "محصولات"
+
+#: .\cart\templates\cart\cart_detail.html:37
+msgid "Price"
+msgstr "قیمت"
+
+#: .\cart\templates\cart\cart_detail.html:38
+msgid "Quantity"
+msgstr "تعداد"
+
+#: .\cart\templates\cart\cart_detail.html:39
+#: .\cart\templates\cart\cart_detail.html:93
+msgid "Total"
+msgstr "مجموع"
+
+#: .\cart\templates\cart\cart_detail.html:40
+msgid "Remove"
+msgstr "حذف"
+
+#: .\cart\templates\cart\cart_detail.html:47
+#: .\cart\templates\cart\cart_detail.html:63
+#: .\cart\templates\cart\cart_detail.html:84
+#: .\product\templates\products\product_details.html:72
+#: .\product\templates\products\product_list.html:189 .\templates\home.html:33
+#: .\templates\home.html:71
+msgid "$"
+msgstr "تومان"
+
+#: .\cart\templates\cart\cart_detail.html:75
+msgid "Apply Coupon"
+msgstr "درخواست کوپن"
+
+#: .\cart\templates\cart\cart_detail.html:79
+msgid "Cart Summary"
+msgstr "خلاصه سبد خرید"
+
+#: .\cart\templates\cart\cart_detail.html:83
+msgid "Subtotal"
+msgstr "جمع فرعی"
+
+#: .\cart\templates\cart\cart_detail.html:87
+msgid "Shipping"
+msgstr "خريد كردن"
+
+#: .\cart\templates\cart\cart_detail.html:96
+msgid "Proceed To Checkout"
+msgstr "به پرداخت ادامه دهید"
+
+#: .\cart\templates\cart\cart_detail.html:102
+msgid " Cart is empty! Please add some products to the cart. "
+msgstr "سبد خالی است! لطفا چند محصول را به سبد خرید اضافه کنید."
+
+#: .\cart\templates\cart\cart_detail.html:104
+msgid " Go shopping "
+msgstr "برو خرید"
+
+#: .\product\models.py:9 .\product\models.py:34
+msgid "very bad"
+msgstr "خیلی بد"
+
+#: .\product\models.py:10 .\product\models.py:35
+msgid "bad"
+msgstr "بد"
+
+#: .\product\models.py:11 .\product\models.py:36
+msgid "normal"
+msgstr "معمولی"
+
+#: .\product\models.py:12 .\product\models.py:37
+msgid "good"
+msgstr "خوب"
+
+#: .\product\models.py:13 .\product\models.py:38
+msgid "perfect"
+msgstr "عالی"
+
+#: .\product\models.py:16
+msgid "Title"
+msgstr "عنوان"
+
+#: .\product\models.py:19
+msgid "Active"
+msgstr "فعال"
+
+#: .\product\models.py:20 .\product\models.py:44
+msgid "Star"
+msgstr "امتیاز"
+
+#: .\product\models.py:22
+msgid "Create"
+msgstr "ساختن"
+
+#: .\product\models.py:23
+msgid "Modified"
+msgstr "اصلاح شده"
+
+#: .\product\models.py:41
+msgid "Product"
+msgstr "محصول"
+
+#: .\product\models.py:42
+msgid "Author"
+msgstr "نویسنده"
+
+#: .\product\models.py:43
+msgid "Body"
+msgstr "بدنه"
+
+#: .\product\models.py:46
+msgid "datetime created"
+msgstr "تاریخ ایجاد "
+
+#: .\product\models.py:47
+msgid "datetime modified"
+msgstr "تاریخ اصلاح "
+
+#: .\product\models.py:49
+msgid "active"
+msgstr "فعال"
+
+#: .\product\templates\products\product_details.html:11
+msgid "Product Details"
+msgstr "جزییات محصول"
+
+#: .\product\templates\products\product_details.html:23
+msgid "Products List"
+msgstr "لیست محصولات"
+
+#: .\product\templates\products\product_details.html:24
+msgid "Product Detail"
+msgstr "جزییات محصول"
+
+#: .\product\templates\products\product_details.html:148
+msgid "Add To Cart"
+msgstr "اضافه به سبد خرید"
+
+#: .\product\templates\products\product_details.html:177
+msgid "Description"
+msgstr "توضیح"
+
+#: .\product\templates\products\product_details.html:178
+#| msgid "email confirmation"
+msgid "Information"
+msgstr "اطلاعات"
+
+#: .\product\templates\products\product_details.html:179
+msgid "Reviews"
+msgstr "بررسی ها"
+
+#: .\product\templates\products\product_details.html:183
+msgid "Product Description"
+msgstr "توضیحات محصول"
+
+#: .\product\templates\products\product_details.html:189
+#| msgid "email confirmation"
+msgid "Additional Information"
+msgstr "اطلاعات تکمیلی"
+
+#: .\product\templates\products\product_details.html:229
+msgid "review for "
+msgstr "بررسی برای"
+
+#: .\product\templates\products\product_details.html:243
+msgid "Rated"
+msgstr "دارای رتبه"
+
+#: .\product\templates\products\product_details.html:243
+msgid " out of 5"
+msgstr "از 5"
+
+#: .\product\templates\products\product_details.html:259
+msgid "Leave a review"
+msgstr "نظر بدهید"
+
+#: .\product\templates\products\product_details.html:263
+#: .\templates\account\logout.html:20
+msgid "Submit"
+msgstr "ارسال"
+
+#: .\product\templates\products\product_details.html:268
+msgid "To write a comment please Login"
+msgstr "برای نوشتن نظر لطفا وارد شوید"
+
+#: .\product\templates\products\product_details.html:269
+msgid "Login"
+msgstr "ورود"
+
+#: .\product\templates\products\product_list.html:11
+msgid "Product List"
+msgstr "لیست محصولات"
+
+#: .\product\templates\products\product_list.html:23
+msgid "products List"
+msgstr "لیست محصولات"
+
+#: .\product\templates\products\product_list.html:37
+msgid "Filter by price"
+msgstr "فیلتر بر اساس قیمت"
+
+#: .\product\templates\products\product_list.html:75
+msgid "Filter by color"
+msgstr "فیلتر بر اساس رنگ"
+
+#: .\product\templates\products\product_list.html:113
+msgid "Filter by size"
+msgstr "فیلتر بر اساس اندازه"
+
+#: .\product\templates\products\product_list.html:164
+msgid "Sorting"
+msgstr "مرتب سازی"
+
+#: .\product\templates\products\product_list.html:166
+msgid "Latest"
+msgstr "آخرین"
+
+#: .\product\templates\products\product_list.html:167
+msgid "Popularity"
+msgstr "محبوبیت"
+
+#: .\product\templates\products\product_list.html:168
+msgid "Best Rating"
+msgstr "بهترین رتبه"
+
+#: .\product\templates\products\product_list.html:208
+msgid "Previous"
+msgstr "قبلی"
+
+#: .\product\templates\products\product_list.html:216
+msgid "Next"
+msgstr "بعدی"
+
+#: .\templates\account\email\email_confirmation_message.txt:5
+#, python-format
+msgid ""
+"\n"
+"\n"
+"Hello from %(site_name)s\n"
+"\n"
+"if you requested this email please click the link below :\n"
+"%(activate_url)s\n"
+"\n"
+msgstr ""
+"\n"
+"سلام از %(site_name)s\n"
+"\n"
+"اگر این ایمیل را درخواست کردید، لطفا روی لینک زیر کلیک کنید:\n"
+"%(activate_url)s\n"
+
+#: .\templates\account\email\email_confirmation_subject.txt:3
+msgid "please confirm your email"
+msgstr "لطفا ایمیل خود را تایید کنید"
 
 #: .\templates\account\email_confirm.html:8
 #: .\templates\account\email_confirm.html:12
@@ -62,10 +336,48 @@ msgstr "مطمئنی؟"
 msgid "Do you want to log out ?"
 msgstr "آیا می خواهید از سیستم خارج شوید؟"
 
-#: .\templates\account\logout.html:20 .\templates\account\signup.html:20
-msgid "Submit"
-msgstr "ارسال"
-
-#: .\templates\account\signup.html:11
+#: .\templates\account\signup.html:11 .\templates\account\signup.html:20
 msgid "Sign Up"
 msgstr "ثبت نام"
+
+#: .\templates\home.html:16
+msgid "Featured Products"
+msgstr "محصولات ویژه"
+
+#: .\templates\home.html:54
+msgid "Recent Products"
+msgstr "محصولات اخیر"
+
+#: .\templates\top_header.html:9
+msgid "Multi"
+msgstr "چند"
+
+#: .\templates\top_header.html:41
+msgid "Contact"
+msgstr "تماس با ما"
+
+#: .\templates\top_header.html:51
+msgid "Profile"
+msgstr "حساب کاربری"
+
+#: .\templates\top_header.html:55
+msgid "My Account"
+msgstr "حساب من"
+
+#: .\templates\top_header.html:57
+#| msgid "Sign Up"
+msgid "Sign in"
+msgstr "ورود"
+
+#: .\templates\top_header.html:58
+#| msgid "Sign Up"
+msgid "Sign up"
+msgstr "ثبت نام"
+
+#: .\templates\top_header.html:63
+msgid "EN"
+msgstr "انگلیسی"
+
+#: .\templates\top_header.html:65
+msgid "FR"
+msgstr "فارسی"
